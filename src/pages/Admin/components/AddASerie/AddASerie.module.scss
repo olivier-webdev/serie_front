@@ -1,0 +1,29 @@
+@use "../../../../assets/styles/mixin" as mixin;
+
+.form {
+  width: 100%;
+  max-width: 800px;
+  .inputPoster {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    @include mixin.xs {
+      margin-right: 0px;
+      width: 70%;
+    }
+    > input {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.feedbackGood {
+  color: var(--error);
+}
+
+.posterMoment {
+  width: 100px;
+  @include mixin.xs {
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.grid {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 350px);
+  grid-auto-columns: repeat(3, 350px);
+  gap: 20px;
+  @include mixin.lg-lt {
+    grid-template-columns: repeat(2, 350px);
+    grid-auto-columns: repeat(2, 350px);
+  }
+  @include mixin.md-lt {
+    grid-template-columns: 350px;
+    grid-auto-columns: 350px;
+  }
+  @include mixin.xs {
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+  }
+}
+
+h1 {
+  @include mixin.xs {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+.item {
+  height: 500px;
+  border: 1px solid black;
+}
+
+.contentCard {
+  max-width: 1130px;
+  width: 100%;
+}
+
+.searchBar {
+  padding: 10px 15px;
+  border: 2px solid var(--gray-2);
+  border-radius: 20px;
+  input {
+    outline: 0;
+    border: 0;
+  }
+}

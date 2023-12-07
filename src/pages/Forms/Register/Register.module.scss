@@ -1,0 +1,28 @@
+@use "../../../assets/styles/mixin" as mixin;
+
+.feedback {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.feedbackGood {
+  color: green;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+form {
+  max-width: 90%;
+  @include mixin.xs {
+    width: 90%;
+  }
+}
+
+label {
+  margin: 3px 4px;
+}
+
+input#cgu {
+  margin-left: 10px;
+}

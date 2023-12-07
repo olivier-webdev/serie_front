@@ -1,0 +1,22 @@
+@use "../../../assets/styles/mixin" as mixin;
+
+.mobileContainer {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4b300d;
+  a {
+    padding: 8px 18px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+  }
+}

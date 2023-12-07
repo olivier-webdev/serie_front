@@ -1,0 +1,32 @@
+@use "../../../../assets/styles/mixin" as mixin;
+
+.list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  flex: 1 1 auto;
+  @include mixin.xs {
+    padding: 10px;
+  }
+  .link {
+    width: 700px;
+    padding: 5px 0px;
+    border-bottom: 1px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include mixin.xs {
+      width: 350px;
+      justify-content: space-between;
+      a {
+        margin-right: -15px;
+      }
+    }
+    .title {
+      flex: 1 1 auto;
+      @include mixin.xs {
+        flex-basis: auto;
+      }
+    }
+  }
+}

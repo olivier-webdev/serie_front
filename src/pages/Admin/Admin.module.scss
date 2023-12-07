@@ -1,0 +1,15 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.admin {
+  @include mixin.xs {
+    flex-direction: column;
+  }
+  .menuAdmin {
+    max-width: 300px;
+    width: 100%;
+    @include mixin.xs {
+      margin: 10px auto;
+      margin-bottom: 0;
+    }
+  }
+}
