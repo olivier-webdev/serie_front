@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { UserContext } from "../../../context";
 import { useState } from "react";
-import { getUser, signout } from "../../../apis/users";
+import { signin, signout } from "../../../apis/users";
 
 export default function UserProvider({ children }) {
   const { users } = useLoaderData();
