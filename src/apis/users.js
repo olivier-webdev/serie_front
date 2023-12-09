@@ -23,11 +23,6 @@ export async function signup(values) {
 }
 
 export async function getUserConnected() {
-  const response = await fetch(`${API_USERS}/users/current`);
-  return await response.json();
-}
-
-export async function getUserConnected() {
   const response = await fetch(`${API_USERS}/users/current`, {
     credentials: "include",
   });
