@@ -1,5 +1,5 @@
-// const API_USERS = "https://serieback-production.up.railway.app/api";
-const API_USERS = "http://localhost:8000/api";
+const API_USERS = "https://serieback-production.up.railway.app/api";
+// const API_USERS = "http://localhost:8000/api";
 
 export async function getSeries() {
   try {

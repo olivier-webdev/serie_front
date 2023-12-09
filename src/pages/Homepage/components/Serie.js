@@ -36,8 +36,8 @@ export default function Serie({ serie }) {
         <NavLink to={`details/${idSerie}`}>
           <img
             onClick={() => getOneSerie(idSerie)}
-            // src={`https://serieback-production.up.railway.app/poster/${poster}`}
-            src={`http://localhost:8000/poster/${poster}`}
+            src={`https://serieback-production.up.railway.app/poster/${poster}`}
+            // src={`http://localhost:8000/poster/${poster}`}
             alt="oneSerie"
           />
         </NavLink>

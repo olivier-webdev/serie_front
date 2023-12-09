@@ -92,8 +92,8 @@ export default function AddASerie() {
       reset(defaultValues);
     } else {
       setPosterPreview(
-        // `https://serieback-production.up.railway.app/poster/${oneSerie[0].poster}`
-        `http://localhost:8000/poster/${oneSerie[0].poster}`
+        `https://serieback-production.up.railway.app/poster/${oneSerie[0].poster}`
+        // `http://localhost:8000/poster/${oneSerie[0].poster}`
       );
       reset({ ...oneSerie[0] });
     }
@@ -104,8 +104,8 @@ export default function AddASerie() {
     posterRef.current.type = "text";
     posterRef.current.type = "file";
     setPosterPreview(
-      // `https://serieback-production.up.railway.app/poster/${oneSerie[0].poster}`
-      `http://localhost:8000/poster/${oneSerie[0].poster}`
+      `https://serieback-production.up.railway.app/poster/${oneSerie[0].poster}`
+      // `http://localhost:8000/poster/${oneSerie[0].poster}`
     );
   };
 
