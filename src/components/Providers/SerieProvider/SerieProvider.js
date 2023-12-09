@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 export default function SerieProvider({ children }) {
   const { series } = useLoaderData();
-  const [allSeries, setAllSeries] = useState(series);
+  const [allSeries, setAllSeries] = useState(series[0]);
   const [oneSerie, setOneSerie] = useState(null);
   const [ratingArticle, setRatingArticle] = useState(0);
   console.log({ series });
