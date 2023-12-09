@@ -27,8 +27,10 @@ export async function getUserConnected() {
   return await response.json();
 }
 
-export async function getAdminConnected() {
-  const response = await fetch(`${API_USERS}/users/admin`);
+export async function getUserConnected() {
+  const response = await fetch(`${API_USERS}/users/current`, {
+    credentials: "include",
+  });
   return await response.json();
 }
 
@@ -37,6 +39,7 @@ export async function signin(credentials) {
   try {
     const response = await fetch(`${API_USERS}/users/login`, {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
