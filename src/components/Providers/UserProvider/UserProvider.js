@@ -13,14 +13,19 @@ export default function UserProvider({ children }) {
     setUserConnected(newUser);
   }
 
-  async function logout() {
+  async function logoutAndRemoveToken() {
     await signout();
-    useEffect(() => {
-      const removeToken = async () => {
-        await navigator.cookies.remove("token");
-      };
-      removeToken();
-    }, []);
+
+    // Remove the token cookie
+    const removeToken = async () => {
+      await navigator.cookies.remove("token");
+    };
+
+    await removeToken();
+  }
+
+  async function logout() {
+    await logoutAndRemoveToken();
     setUserConnected(null);
   }
 
