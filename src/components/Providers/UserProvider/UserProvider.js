@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { UserContext } from "../../../context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { signin, signout } from "../../../apis/users";
 
 export default function UserProvider({ children }) {
@@ -15,6 +15,12 @@ export default function UserProvider({ children }) {
 
   async function logout() {
     await signout();
+    useEffect(() => {
+      const removeToken = async () => {
+        await navigator.cookies.remove("token");
+      };
+      removeToken();
+    }, []);
     setUserConnected(null);
   }
 
