@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import { UserContext } from "../../../context";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { signin, signout } from "../../../apis/users";
+import Cookies from "js-cookie";
 
 export default function UserProvider({ children }) {
   const { users } = useLoaderData();
@@ -18,7 +19,7 @@ export default function UserProvider({ children }) {
 
     // Remove the token cookie
     const removeToken = async () => {
-      await navigator.cookies.remove("token");
+      Cookies.remove("token");
     };
 
     await removeToken();
