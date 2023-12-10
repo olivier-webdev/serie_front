@@ -58,5 +58,6 @@ export async function signin(credentials) {
 export async function signout() {
   await fetch(`${API_USERS}/users`, {
     method: "DELETE",
+    credentials: "include",
   });
 }
