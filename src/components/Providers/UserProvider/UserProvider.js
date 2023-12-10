@@ -16,9 +16,7 @@ export default function UserProvider({ children }) {
 
   async function logout() {
     await signout();
-
-    await Cookie.remove("token");
-
+    Cookie.remove("token");
     setUserConnected(null);
   }
 

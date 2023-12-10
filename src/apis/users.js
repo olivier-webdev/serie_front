@@ -56,8 +56,18 @@ export async function signin(credentials) {
 }
 
 export async function signout() {
-  await fetch(`${API_USERS}/users`, {
-    method: "DELETE",
-    credentials: "include",
-  });
+  try {
+    const response = await fetch(`${API_USERS}/users`, {
+      method: "DELETE",
+      credentials: "include",
+    });
+
+    if (response.ok) {
+      console.log("Cookie cleared successfully");
+    } else {
+      console.error("Failed to clear cookie:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error during signout:", error);
+  }
 }
